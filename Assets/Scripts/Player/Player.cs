@@ -13,13 +13,13 @@ public class Player : MonoBehaviour
         _playerHealth = GetComponent<PlayerHealth>();
         _playerHealth.PlayerDestroy += OnDestroy;
     }
-    
-    public void TakeDamage(int damage) => 
-        PlayerTakeDamage(damage);
 
     private void OnDestroy()
     {
         _playerHealth.PlayerDestroy -= OnDestroy;
         Destroy(gameObject);
     }
+
+    public void TakeDamage(int damage) => 
+        PlayerTakeDamage(damage);
 }

@@ -13,16 +13,12 @@ public class Enemy : MonoBehaviour
         _enemyCollision.collisionPlayer += OnTakeDamage;
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() => 
         _enemyCollision.collisionPlayer -= OnTakeDamage;
-        Destroy(gameObject);
-    }
 
     private void OnTakeDamage(Player player)
     {
         player.TakeDamage(_damage);
-        
         Destroy(gameObject);
     }
 }
