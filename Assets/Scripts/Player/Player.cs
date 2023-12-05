@@ -1,11 +1,19 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerHealth))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _health;
-
-    public void ApplyDamage(int damage)
+    private PlayerHealth _playerHealth;
+    
+    private void Awake()
     {
-        
+        _playerHealth = GetComponent<PlayerHealth>();
+        _playerHealth.PlayerDestroy += OnDestroy;
+    }
+
+    private void OnDestroy()
+    {
+        _playerHealth.PlayerDestroy -= OnDestroy;
+        Destroy(gameObject);
     }
 }
