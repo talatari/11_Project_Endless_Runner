@@ -26,7 +26,7 @@ public class UIScoreTextUpdater : MonoBehaviour
     public void SetPlayerDead() => 
         _isPlayerDead = true;
 
-    private void OnIncrementScore()
+    public void OnIncrementScore()
     {
         if (_isPlayerDead == false)
             _score++;
