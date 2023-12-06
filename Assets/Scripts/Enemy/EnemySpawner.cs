@@ -1,12 +1,16 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : EnemyPool
 {
-    [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private float _spawnDelay = 1f;
 
     private float _elapsedTime = 1f;
+
+    private void Start() => 
+        Init(_enemyPrefab);
 
     private void Update()
     {
@@ -14,14 +18,19 @@ public class EnemySpawner : MonoBehaviour
 
         if (_elapsedTime >= _spawnDelay)
         {
-            _elapsedTime = 0f;
-            Spawn();
+            if (TryGetEnemy(out GameObject enemy))
+            {
+                _elapsedTime = 0f;
+
+                int randomIndex = Random.Range(0, _spawnPoints.Length);
+                SetEnemy(enemy, _spawnPoints[randomIndex].position);
+            }
         }
     }
 
-    private void Spawn()
+    private void SetEnemy(GameObject enemy, Vector3 spawnPosition)
     {
-        int randomIndex = Random.Range(0, _spawnPoints.Length);
-        Instantiate(_enemyPrefab, _spawnPoints[randomIndex].position, Quaternion.identity);
+        enemy.SetActive(true);
+        enemy.transform.position = spawnPosition;
     }
 }
