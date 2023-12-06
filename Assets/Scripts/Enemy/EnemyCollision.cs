@@ -11,7 +11,7 @@ public class EnemyCollision : MonoBehaviour
         if (other.TryGetComponent(out Player player))
             collisionPlayer?.Invoke(player);
 
-        if (other.TryGetComponent(out DeathWall deathWall))
+        if (other.TryGetComponent(out EnemyDeathWall deathWall))
             collisionWallDeath?.Invoke();
     }
 }
