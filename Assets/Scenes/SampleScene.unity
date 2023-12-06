@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner+
       objectReference: {fileID: 0}
+    - target: {fileID: 6550599867744341349, guid: 74d110263707a493dad2e4116a711959, type: 3}
+      propertyPath: _capacity
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

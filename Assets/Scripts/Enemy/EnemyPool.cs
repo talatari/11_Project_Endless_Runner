@@ -27,7 +27,8 @@ public class EnemyPool : MonoBehaviour
 
     protected bool TryGetEnemy(out GameObject enemy)
     {
-        enemy = _enemyPool.FirstOrDefault(enemyPool => enemyPool.activeSelf == false);
-        return enemy is not null;
+        int randomIndex = Random.Range(0, _enemyPool.Count);
+        enemy = _enemyPool[randomIndex];
+        return enemy.activeSelf == false;
     }
 }
