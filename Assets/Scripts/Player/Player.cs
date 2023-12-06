@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     private PlayerHealth _playerHealth;
     
     public event Action<int> PlayerTakeDamage;
+    public event Action PlayerDestroy;
     
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
+        PlayerDestroy?.Invoke();
         _playerHealth.PlayerDestroy -= OnDestroy;
         Destroy(gameObject);
     }
