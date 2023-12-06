@@ -88,7 +88,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
-  _stepSize: 3
   _highBorder: 3
   _lowBorder: -3
 --- !u!212 &3125091891255956649
@@ -169,7 +168,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &3667839054246454187
 PolygonCollider2D:
   m_ObjectHideFlags: 0

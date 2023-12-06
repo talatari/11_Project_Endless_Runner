@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : EnemyPool
 {
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject[] _enemyPrefab;
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private float _spawnDelay = 1f;
 
