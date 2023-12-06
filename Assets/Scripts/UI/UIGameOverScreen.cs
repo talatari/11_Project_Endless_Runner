@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIGameOverScreen : MonoBehaviour
 {
@@ -13,7 +14,15 @@ public class UIGameOverScreen : MonoBehaviour
         _player.PlayerDestroy += OnSetActive;
 
     private void OnDisable() => 
-        _player.PlayerDestroy += OnSetActive;
+        _player.PlayerDestroy -= OnSetActive;
+
+    public void OnRestartGame()
+    {
+        int currenSceneIndex = 0;
+        
+        OnSetInActive();
+        SceneManager.LoadScene(currenSceneIndex);
+    }
 
     private void OnSetActive() => 
         _gameOverScreen.SetActive(true);
