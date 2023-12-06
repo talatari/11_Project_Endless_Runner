@@ -21,11 +21,15 @@ public class PlayerMover : MonoBehaviour
     {
         if (transform.position.y < _highBorder)
             _targetPosition.y += offset * _moveSpeed;
+        else
+            _targetPosition.y = _highBorder;
     }
 
     public void SetTargetDown(float offset)
     {
         if (transform.position.y > _lowBorder)
             _targetPosition.y -= offset * _moveSpeed;
+        else
+            _targetPosition.y = _lowBorder;
     }
 }

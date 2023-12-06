@@ -6,7 +6,8 @@ public class UIHealthBar : MonoBehaviour
 {
     [SerializeField] private TMP_Text _tmpText;
     [SerializeField] private Image _fillBar;
-    
+    [SerializeField] private Gradient _gradient;
+
     private PlayerHealth _playerHealth;
 
     private void Awake()
@@ -22,5 +23,6 @@ public class UIHealthBar : MonoBehaviour
     {
         _tmpText.text = currentHealth + " / " + maxHealth;
         _fillBar.fillAmount = (float) currentHealth / maxHealth;
+        _fillBar.color = _gradient.Evaluate(_fillBar.fillAmount);
     }
 }
