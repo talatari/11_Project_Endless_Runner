@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class SelectRandomSprite : MonoBehaviour
+public class UISelectRandomSprite : MonoBehaviour
 {
     [SerializeField] private Sprite[] _sprites;
 
