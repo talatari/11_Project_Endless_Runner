@@ -4,7 +4,7 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _highBorder = 3f;
-    [SerializeField] private float _lowBorder = -3f;
+    [SerializeField] private float _lowBorder = -4f;
     
     private Vector3 _targetPosition;
 
