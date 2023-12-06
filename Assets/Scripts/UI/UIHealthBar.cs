@@ -9,7 +9,7 @@ public class UIHealthBar : MonoBehaviour
     
     private PlayerHealth _playerHealth;
 
-    private void Start()
+    private void Awake()
     {
         _playerHealth = FindObjectOfType<PlayerHealth>();
         _playerHealth.HealthChanged += OnRefreshHealthBar;

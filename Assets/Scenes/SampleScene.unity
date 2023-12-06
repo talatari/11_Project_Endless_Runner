@@ -283,11 +283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1406140683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7896444603880409731, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
-  m_PrefabInstance: {fileID: 1580622799}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1580622799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -296,6 +291,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1601892432}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIGameOverScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 297561541397731303, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3846359616829514480, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -376,6 +399,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4188305487229437254, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188305487229437254, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6234215321672769630, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
       propertyPath: m_Name
       value: Canvas+
@@ -383,29 +414,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6234215321672769630, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1601892432}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
---- !u!1 &1601892426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6234215321672769630, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
+--- !u!114 &1601892432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2090685520312355504, guid: c54905b7b376a4419906cdf45296ef17, type: 3}
   m_PrefabInstance: {fileID: 1580622799}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1601892432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601892426}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e5891da52bd04d0b817b41acafda4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverScreen: {fileID: 1406140683}
 --- !u!1001 &3182485423074787035
 PrefabInstance:
   m_ObjectHideFlags: 0

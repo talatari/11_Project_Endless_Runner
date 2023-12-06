@@ -9,9 +9,10 @@ public class PlayerHealth : MonoBehaviour
     private Player _player;
     private int _currentHealth;
     private int _minHealth = 0;
+    private int _clamp;
 
-    public event Action PlayerDestroy = delegate { };
-    public event Action<int, int> HealthChanged = delegate { };
+    public event Action PlayerDestroy;
+    public event Action<int, int> HealthChanged;
 
     private void Awake()
     {
@@ -21,18 +22,18 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void Start() => 
-        HealthChanged(_currentHealth, _maxHealth);
+        HealthChanged?.Invoke(_currentHealth, _maxHealth);
 
     private void OnDestroy() => 
         _player.PlayerTakeDamage -= OnTakeDamage;
 
     private void OnTakeDamage(int damage)
     {
-        Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
-        
+        _clamp = Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
+
         if (_currentHealth <= _minHealth)
-            PlayerDestroy();
+            PlayerDestroy?.Invoke();
         
-        HealthChanged(_currentHealth, _maxHealth);
+        HealthChanged?.Invoke(_currentHealth, _maxHealth);
     }
 }
