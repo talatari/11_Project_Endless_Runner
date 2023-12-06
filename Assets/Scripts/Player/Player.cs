@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     private PlayerHealth _playerHealth;
     
-    public event Action<int> PlayerTakeDamage = delegate {  };
+    public event Action<int> PlayerTakeDamage;
     
     private void Awake()
     {
@@ -21,5 +21,5 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage) => 
-        PlayerTakeDamage(damage);
+        PlayerTakeDamage?.Invoke(damage);
 }

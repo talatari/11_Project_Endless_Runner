@@ -445,6 +445,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3667839054246454187, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551242282582352683, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551242282582352683, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4748441797881620405, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
       propertyPath: m_Name
       value: Player+
@@ -488,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 6659642251529638929, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199874098264388379, guid: cadeb3e7bd68c4e52a57251dd4bf543f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -545,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 3932084667812471405, guid: 74d110263707a493dad2e4116a711959, type: 3}
       propertyPath: m_Name
       value: EnemySpawner+
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932084667812471405, guid: 74d110263707a493dad2e4116a711959, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
