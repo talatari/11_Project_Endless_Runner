@@ -13,9 +13,6 @@ public class PlayerHealth : MonoBehaviour
     public event Action PlayerDestroy = delegate { };
     public event Action<int, int> HealthChanged = delegate { };
 
-    public int MaxHealth => _maxHealth;
-    public int CurrentHealth => _currentHealth;
-    
     private void Awake()
     {
         _player = GetComponent<Player>();
@@ -29,13 +26,6 @@ public class PlayerHealth : MonoBehaviour
     private void OnDestroy() => 
         _player.PlayerTakeDamage -= OnTakeDamage;
 
-    private void OnCollectedAidKit(int health)
-    {
-        Mathf.Clamp(_currentHealth += health, _minHealth, _maxHealth);
-        
-        HealthChanged(_currentHealth, _maxHealth);
-    }
-    
     private void OnTakeDamage(int damage)
     {
         Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
